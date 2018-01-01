@@ -13,20 +13,20 @@ Before we begin, it is important to have a full understanding of all the feature
 See the project wireframes to understand how the application will flow before we begin development.
 
 ## Feature 00 - Project setup
-[Instructions here](./Feature00_setup)
+[Instructions here](./student/Feature00_setup)
 
 ## Feature 01 - Movies resource CRUD
-[Instructions here](./Feature01_movies_crud)
+[Instructions here](./student/Feature01_movies_crud)
 
 ## Feature 02 - Directors resource CRUD
-[Instructions here](./Feature02_directors_crud)
+[Instructions here](./student/Feature02_directors_crud)
 
 ## Feature 03 - Linking directors and movies
-[Instructions here](./Feature03_linking_directors_and_movies)
+[Instructions here](./student/Feature03_linking_directors_and_movies)
 
 ## Feature 04 - User authentication
-[Instructions here](./Feature04_user_auth)
+[Instructions here](./student/Feature04_user_auth)
 
 ## Feature 05 - Deployment
-[Instructions here](./Feature05_deployment)
+[Instructions here](./student/Feature05_deployment)
 
