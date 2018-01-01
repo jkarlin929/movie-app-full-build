@@ -7,12 +7,12 @@ Movie.findAll = () => {
 }
 
 Movie.findById = (id) => {
-  console.log(db)
+  // console.log(db)
   return db.oneOrNone(`SELECT * FROM movies WHERE id = $1`, [id])
 }
 
 Movie.update = (movie, id) => {
-  console.log("this is movie: ", movie, id)
+  //  console.log("this is movie: ", movie, id)
   return db.none(
     `
     UPDATE movies SET 

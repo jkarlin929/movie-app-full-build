@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 // configure ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
-console.log("this is __dirname; ", __dirname)
+// console.log("this is __dirname; ", __dirname)
 
 app.get('/', (req,res) => {
   res.send('hello my young budding developers in the making...')
