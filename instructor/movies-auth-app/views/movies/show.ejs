@@ -1,0 +1,8 @@
+<%# views/movies/show.ejs %>
+<h1><%= movie.title %></h1>
+<p><%= movie.description %></p>
+
+<a href="/movies">Back to all movies</a>
+<a href="<%= `/movies/${movie.id}/edit` %>">
+  Edit Movie...do it...go on do it...
+</a>
