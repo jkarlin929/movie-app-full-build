@@ -9,7 +9,7 @@ npm install --save passport passport-local express-session cookies-parser bcrypt
 Now let's tell our app how to use them.
 
 ```javascript
-// app.js
+// server.js
 
 require('dotenv').config();
 
@@ -44,9 +44,9 @@ After we tell the app to use passport and passport sessions, we then require an 
 
 After that, we are requireing a middleware that we will write called `authHelpers.loginRequired`. We are telling our app to use this function before we tell it to use all of our other routes. This is because we want our app to require a user to be signed in for all routes except the user login and registration pages.
 
-> Note: We haven't written this `auth-helpers` middlware or the `auth-routes` yet. But it's still ok to write this in our app.js file because it will give us a sence of what our next tasks sould be.
+> Note: We haven't written this `auth-helpers` middlware or the `auth-routes` yet. But it's still ok to write this in our server.js file because it will give us a sence of what our next tasks sould be.
 
-Lastly, for this `app.js` to be configures properly, we need a `.env` file with a SESSION_KEY.
+Lastly, for this `server.js` to be configures properly, we need a `.env` file with a SESSION_KEY.
 
 ```bash
 # .env
@@ -56,7 +56,7 @@ SESSION_KEY=whatever_key_you_want
 
 **Make sure to add this to your `.gitignore!`**
 
-Now that our app.js is in order, we can configure passport.
+Now that our server.js is in order, we can configure passport.
 
 ```
 mkdir -p services/auth
