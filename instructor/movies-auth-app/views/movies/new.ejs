@@ -1,0 +1,19 @@
+<%# views/movies/new.ejs %>
+
+<h1>Create a movie</h1>
+
+<form action="/movies" method="POST">
+  <label for="title">Title</label>
+  <input id="title" type="text" name="title" />
+
+  <br />
+
+  <label for="description">Description</label>
+  <input id="description" type="text" name="description" />
+
+  <br />
+
+  <input type="submit" value="Create the movie!" />
+</form>
+
+<a href="/movies">Cancel</a>

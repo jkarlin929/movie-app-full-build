@@ -3,7 +3,7 @@ const db = require('../db/config');
 const Movie = {};
 
 Movie.findAll = () => {
-  return db.query('SELECT * FROM movies');
+  return db.query('SELECT * FROM movies ORDER BY id DESC');
 }
 
 Movie.findById = (id) => {
@@ -22,6 +22,27 @@ Movie.update = (movie, id) => {
    `, 
     [movie.title,movie.description, id]
     )
+}
+
+Movie.create = movie => {
+  return db.one(
+    `
+      INSERT INTO movies
+      (title, description)
+      VALUES ($1, $2) RETURNING *
+    `,
+    [movie.title, movie.description]
+  );
+};
+
+Movie.destroy = id => {
+  return db.none(
+    `
+      DELETE FROM movies
+      WHERE id = $1
+    `,
+    [id]
+  );
 }
 
 module.exports = Movie;
