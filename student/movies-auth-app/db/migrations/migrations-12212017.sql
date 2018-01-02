@@ -1,4 +1,4 @@
-\c movies_auth_dev
+\c movies_auth_development
 
 CREATE TABLE IF NOT EXISTS movies (
   id BIGSERIAL PRIMARY KEY,
