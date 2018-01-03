@@ -12,26 +12,26 @@ Movie.findById = (id) => {
 }
 
 Movie.update = (movie, id) => {
-  //  console.log("this is movie: ", movie, id)
   return db.none(
     `
-    UPDATE movies SET 
-    title = $1, 
-    description = $2
-    WHERE id = $3 
-   `, 
-    [movie.title,movie.description, id]
-    )
-}
+      UPDATE movies SET
+      title = $1,
+      description = $2,
+      director_id = $3
+      WHERE id = $4
+    `,
+    [movie.title, movie.description, movie.director_id, id]
+  );
+};
 
 Movie.create = movie => {
   return db.one(
     `
       INSERT INTO movies
-      (title, description)
-      VALUES ($1, $2) RETURNING *
+      (title, description, director_id)
+      VALUES ($1, $2, $3) RETURNING *
     `,
-    [movie.title, movie.description]
+    [movie.title, movie.description, movie.director_id]
   );
 };
 

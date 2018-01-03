@@ -13,6 +13,17 @@
 
   <br />
 
+<label for="director_id">Director</label>
+<select id="director_id" name="director_id">
+  <% directors.forEach(director => {
+  %>
+    <option value="<%= director.id %>">
+  <%= `${director.first_name} ${director.last_name}` %>
+</option>
+<% }) %>
+</select>
+
+  <br />
   <input type="submit" value="Create the movie!" />
 </form>
 

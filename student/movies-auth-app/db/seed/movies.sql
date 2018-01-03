@@ -1,4 +1,5 @@
-\c movies_auth_dev
+\c movies_auth_development
+
 INSERT INTO movies (title, description) VALUES
   (
     'Birdman or (The Unexpected Virtue of Ignorance)',

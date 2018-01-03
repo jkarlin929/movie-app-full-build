@@ -13,7 +13,18 @@
 
   <br />
 
+  <label for="director_id">Director</label>
+<select id="director_id" name="director_id">
+  <% directors.forEach(director => { %>
+    <option
+      value="<%= director.id %>"
+      selected="<%= movie.director_id == director.id %>">
+      <%= `${director.first_name} ${director.last_name}` %>
+    </option>
+  <% }) %>
+</select>
   <input type="submit" value="Save changes" />
+
 </form>
 
 <a href="<%= `/movies/${movie.id}` %>">Cancel</a>

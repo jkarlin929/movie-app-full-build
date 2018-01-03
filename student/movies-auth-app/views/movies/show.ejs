@@ -7,6 +7,10 @@
   Edit Movie...do it...go on do it...
 </a>
 
+<% if (director) { %>
+  <h4>Directed by: <%= `${director.first_name} ${director.last_name} `%> </h4>
+<% } %>
+
 <form action="<%= `/movies/${movie.id}?_method=DELETE` %>" method="POST">
   <input type="submit" value="Delete" />
 </form>

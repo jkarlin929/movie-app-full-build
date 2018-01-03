@@ -5,3 +5,5 @@ CREATE TABLE IF NOT EXISTS movies (
   title VARCHAR(255),
   description TEXT
 )
+
+ALTER TABLE movies ADD COLUMN director_id INTEGER;
